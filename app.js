@@ -1,5 +1,5 @@
-var width = window.innerHeight;
-var height = window.innerHeight;
+var width = Math.max(window.innerHeight, window.innerWidth);
+var height = width;
 
 var deltaX = Math.max(window.innerHeight - window.innerWidth, 0);
 var deltaY = Math.max(window.innerWidth - window.innerHeight, 0);
