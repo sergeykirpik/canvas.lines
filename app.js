@@ -1,7 +1,9 @@
-var width = window.innerWidth;
-var height = width;
+var width = window.innerHeight;
+var height = window.innerHeight;
 
-var delta = window.innerWidth - window.innerHeight;
+var deltaX = Math.max(window.innerHeight - window.innerWidth, 0);
+var deltaY = Math.max(window.innerWidth - window.innerHeight, 0);
+
 
 var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
@@ -9,7 +11,7 @@ canvas.height = window.innerHeight;
 
 var ctx = canvas.getContext('2d');
 
-ctx.translate(0, -delta/2);
+ctx.translate(-deltaX/2, -deltaY/2);
 
 ctx.lineWidth = 5;
 
